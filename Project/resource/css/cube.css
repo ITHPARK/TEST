@@ -1,0 +1,37 @@
+@charset "utf-8";
+
+
+html,
+body {
+  overflow: hidden;
+  height: 100%;
+}
+
+body {
+  background-color: #000;
+  perspective: 500px;
+  perspective-origin: 50% 50%;
+}
+
+.wrap {width: 100%; height: 100vh; background-color: #000;perspective: 500px; perspective-origin: 50% 50%; }
+.cube {position: absolute; left: 50%; top: 50%;  width: 200px; height: 200px; border: 1px dashed #ddd; transform-style: preserve-3d; }
+.cube .square { display: block  ; position: absolute; left: 0;right: 0;top: 0;bottom: 0; width: 100%; height: 100%; margin: auto; font-size: 30px; font-weight: 500; color: #fff; line-height: 198px; text-align: center; background: rgba(255, 255, 255, 0.3); border: 1px solid #fff; }
+.cube .square.front { transform:  rotateY(0deg) translateZ(100px); }
+
+/* 뒷면은 뒤집기 */
+.cube .square.back {transform: rotateY(180deg) translateZ(100px);} /*너비의 절반만큼 traslateZ주기*/
+
+/* 옆면 세우기 y축 */
+.cube .square.left {transform: rotateY(-90deg) translateZ(100px); }
+.cube .square.right {transform: rotateY(90deg) translateZ(100px);}
+
+/* 상하 눕히기 x축 */
+.cube .square.top {transform: rotateX(-90deg) translateZ(100px);}
+.cube .square.bottom {transform: rotateX(90deg) translateZ(100px);}
+
+
+
+
+
+
+

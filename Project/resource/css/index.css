@@ -1,4 +1,10 @@
 @charset "utf-8";
+body { perspective: 500px; perspective-origin: 50% 50%;}
+
+.quickMenu {position: fixed; right: 100px; z-index: 9999;}
+
+
+
 
 header {position: fixed; left: 0; top: 0; width: 100%; height: 70px; background: none;  z-index: 10;;}
 header .inner {display: flex; justify-content: center; align-items: center; position: relative;  width: 1200px; margin: 0 auto; }
@@ -15,4 +21,21 @@ header .clock_box p {font-size: 16px; font-weight: 400; color: #fff;}
 
 .menu {position: fixed; right: 100px; top: 50%; transform: translateY(-50%); z-index: 10;}
 
+/* cube css */
+.wrap { width: 100%; perspective: 500px; perspective-origin: 50% 50%;}
+.cube { position: absolute; left: 50%; top: 50%; width: 100px; height: 100px; border: 1px dashed #ddd; transform-style: preserve-3d;}
+.cube .square { display: block; position: absolute; left: 0; right: 0; top: 0; bottom: 0; width: 100%; height: 100%; margin: auto; font-size: 30px; font-weight: 500; color: #333; line-height: 96px; text-align: center; background: #fff; border: 2px solid #000;}
+.cube .square.front {transform: rotateY(0deg) translateZ(50px);}
 
+/* 뒷면은 뒤집기 */
+.cube .square.back {transform: rotateY(180deg) translateZ(50px);}
+
+/*너비의 절반만큼 traslateZ주기*/
+
+/* 옆면 세우기 y축 */
+.cube .square.left {transform: rotateY(-90deg) translateZ(50px);}
+.cube .square.right {transform: rotateY(90deg) translateZ(50px);}
+
+/* 상하 눕히기 x축 */
+.cube .square.top {transform: rotateX(-90deg) translateZ(50px);}
+.cube .square.bottom {transform: rotateX(90deg) translateZ(50px);}
