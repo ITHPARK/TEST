@@ -1,5 +1,9 @@
 window.onload = function() {
   const cubeEl = document.querySelector(".cube");
+  
+  gsap.to(cubeEl, 0, {
+          transform: `rotateX(30deg) rotateY(30deg)`,
+        },1000);
 
   let clickX = 0;
   let clickY = 0;
@@ -7,8 +11,8 @@ window.onload = function() {
   let moveX = 0;
   let moveY = 0;
 
-  let lastX = 0;
-  let lastY = 0;
+  let lastX = 30;
+  let lastY = 30;
 
 
   ///////////////////
@@ -28,7 +32,9 @@ window.onload = function() {
 
         moveX = lastX + clickY - nowY;
         moveY = lastY - clickX + nowX;
-
+        
+        console.log(clickX, clickY)
+        console.log(nowX, nowY)
         console.log(`X 회전각 : ${moveX} Y 회전각 : ${moveY}`);
 
         gsap.to(cubeEl, 0, {
