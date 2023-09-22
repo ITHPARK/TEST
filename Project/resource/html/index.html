@@ -9,15 +9,17 @@
     <title>파일</title>
 
     <!---Default linked CSS&JS-->
-<link href="https://fonts.googleapis.com/css2?family=Orbit&display=swap" rel="stylesheet">    <link rel="stylesheet" href="../css/reset.css">
+    <link href="https://fonts.googleapis.com/css2?family=Orbit&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../css/reset.css">
     <link rel="stylesheet" href="../css/font.css">
-    <!-- <link rel="stylesheet" href="../css/base.css"> -->
+    <link rel="stylesheet" href="../css/base.css">
     <link rel="stylesheet" href="../css/jquery-ui.min.css">
     
     <script src="../js/plugins/gsap/gsap.min.js"></script>
     <script src="../js/jquery/jquery-3.6.0.min.js"></script>
     <script src="../js/jquery/jquery-ui.min.js"></script>
     <script src="../js/header.js"></script>
+    <script src="../js/common.js"></script>
     <!---//Default linked CSS&JS-->
 
     <link rel="stylesheet" href="../css/index.css">
@@ -57,6 +59,18 @@
 
 <body>
     <div class="wrap">
+    
+        <div class="intro">
+            <div class="inner">
+                <h2 class="intro_txt"></h2>
+                <div class="loading_animate">
+                    <span class=" character">
+                        <img src="../images/character/canvas_character.png" alt="캐릭터">
+                    </span>
+                    <span class="door"></span>
+                </div>
+            </div>
+        </div>
     
         <div class="quickMenu">
             <div class="quick_inner">
@@ -375,6 +389,7 @@
 </body>
 
 <script src="../js/canvas.js"></script>
+
 
 
 </html>
