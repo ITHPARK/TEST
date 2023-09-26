@@ -49,7 +49,6 @@
                 //    credits: { section }
             
             });
-                
         });
         
 
@@ -63,10 +62,11 @@
         <div class="intro">
             <div class="inner">
                 <h2 class="intro_txt"></h2>
-                <div class="loading_animate">
-                    <span class=" character">
-                        <img src="../images/character/canvas_character.png" alt="캐릭터">
-                    </span>
+                <div class="loading_animate">     
+                    <canvas id="characterCanvas">
+                    
+                    </canvas>
+                    <script src="../js/introCanvas.js"></script>
                     <span class="door"></span>
                 </div>
             </div>
@@ -117,9 +117,7 @@
         <div class="fullpage">
             <div class="section first_page">
                 <div class="inner">
-                    <canvas id="mainCanvas" class="canvas" onload="draw();">
-                        
-                    </canvas>
+
                 </div>
             </div>
             <div class="section">
@@ -388,7 +386,6 @@
     
 </body>
 
-<script src="../js/canvas.js"></script>
 
 
 

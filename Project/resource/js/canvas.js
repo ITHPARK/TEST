@@ -8,11 +8,12 @@ const ctx = canvas.getContext('2d');
     //캔버스의 DPR 정보
     const dpr = window.devicePixelRatio;
 
-    // 캔버스 요소의 크기 가져오기
-    const rect = canvas.getBoundingClientRect();
-
-    canvas.width = rect.width * dpr;
-    canvas.height = rect.height * dpr;
+    // 캔버스 요소의 설정 가져오기
+    const canvasWidth = 1200;
+    const canvasHeight = window.innerHeight;
+    
+    canvas.width = canvasWidth * dpr;
+    canvas.height = canvasHeight * dpr;
 
     // scale() 함수를 사용하여 캔버스 유닛 크기 보정
     ctx.scale(dpr, dpr);

@@ -5,11 +5,10 @@ body { perspective: 500px; perspective-origin: 50% 50%;}
 .inner { width: 1200px; height: 100%; margin: 0 auto;}
 
 .intro {position: fixed; width: 100vw; height: 100vh; background: #000; z-index: 10000;}
-.intro .inner {display: flex; align-items: center; justify-content: center; position: relative;}
+.intro .inner {display: block; position: relative;}
+.intro .intro_txt { position: absolute; left: 50%; top: 50%; transform: translate(-50%, -50%);}
 .intro .inner h2 {font-size: 40px; font-weight: 500; color: #fff; border-right: 1px solid #fff;}
-.intro .inner .loading_animate {position: absolute; left: 0; bottom: 0; width: 100%;}
-.intro .inner .loading_animate .character {display: inline-block; width: 100px; ;}
-.intro .inner .loading_animate .character img {width: 100%;}
+.intro .inner .loading_animate #characterCanvas {display: block; width: 100%; height: 100%;}
 .intro .inner .loading_animate .door {display: inline-block; position: absolute; right: 0; bottom: 0; width: 120px; height: 150px; background: #fff; border-radius: 15px 15px 0 0; box-shadow: inset 8px 7px 5px rgba(0, 0, 0, 0.7);}
 
 /* 타이핑 효과 애니메이션 */

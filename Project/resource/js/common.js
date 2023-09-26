@@ -24,8 +24,27 @@ $(function () {
     if (i == 9) { 
       clearInterval(goTyping);    
     }  
+  }
+  
+  //문으로 걸어가는 캐릭터 
+  let move = 0;
+  $('.character').css('left', move);
+  let characterAnimation = setInterval(goCharacter, 25);
+
+  function goCharacter(){
+    move += 1;
+    $('.character').css('left', `${move}%`);  
+    
+    if(move > 87){
+      clearInterval(characterAnimation);
+    }
     
   }
+  
+
+  
+  
+  
 });
   
   

@@ -27,7 +27,6 @@
 
   <script src="../js/plugins/fullPage/vendors/scrolloverflow.js"></script>
   <script src="../js/plugins/fullPage/jquery.fullpage.min.js"></script>
-  <script src="../js/3D_Cube.js"></script>
   <script>
 
 
@@ -38,15 +37,10 @@
 
 <body>
   <div class="wrap">
-    <div class="cube">
-        <div class="square front">앞</div>
-        <div class="square back">뒤</div>
-        <div class="square left">좌</div>
-        <div class="square right">우</div>
-        <div class="square top">상</div>
-        <div class="square bottom">하</div>
-    </div>
+    <canvas id="mainCanvas" class="canvas" onload="draw();">
     
+    </canvas>
+    <script src="../js/canvas.js"></script>
   </div>
 
 </body>
