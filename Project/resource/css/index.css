@@ -8,21 +8,28 @@ body { perspective: 500px; perspective-origin: 50% 50%;}
 .intro .inner {display: block; position: relative;}
 .intro .intro_txt { position: absolute; left: 50%; top: 50%; transform: translate(-50%, -50%);}
 .intro .inner h2 {font-size: 40px; font-weight: 500; color: #fff; border-right: 1px solid #fff;}
+.intro .inner .loading_animate { display: none; }
 .intro .inner .loading_animate #characterCanvas {display: block; width: 100%; height: 100%;}
 .intro .inner .loading_animate .door {display: inline-block; position: absolute; right: 0; bottom: 0; width: 120px; height: 150px; background: #fff; border-radius: 15px 15px 0 0; box-shadow: inset 8px 7px 5px rgba(0, 0, 0, 0.7);}
 
-/* 타이핑 효과 애니메이션 */
-/* .blink {
-  animation: blink 0.5s infinite;
-  font-size: 2.5rem;
-  color: #fff;
+.intro .inner .loading_animate .key_press {display: inline-block; position: absolute; left: -3%; top: 79%; font-size: 30px; font-weight: 300; color: #fff; animation-name: upDown; animation-timing-function: linear; animation-duration: 3s; animation-iteration-count: infinite;  z-index: 20;}
+ 
+@keyframes upDown {
+  0% {
+    margin-top: 0;
+  }
+  
+  50% {
+    margin-top: 30px;
+  }
+
+  100% {
+    margin-top: 0;
+  }
 }
 
-@keyframes blink {
-  to {
-    opacity: 0;
-  }
-} */
+
+
 
 
 

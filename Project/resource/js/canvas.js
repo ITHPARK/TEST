@@ -118,7 +118,7 @@ function update () {
 };
 
 //방향별 키 함수
-function moveRight () {player.dxRight = player.speed}
+function moveRight() { player.dxRight = player.speed; console.log('asd ')}
 function moveLeft () {player.dxLeft = -player.speed}
 function moveDown () {player.dyDown = player.speed}
 function moveUp () {player.dyUp = -player.speed}
