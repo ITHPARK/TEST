@@ -1,12 +1,50 @@
+$(function () {
+
+    let title = document.querySelector('.intro_txt');
+    //태그가 body에 작성된 이후에 선택자로 잡혀야 함   
+    
+     //타이핑 효과
+    let textC = "123123"
+    let i = 0; 
+    let goTyping;
+    
+    
+    $('.loading_animate').fadeIn(1500, function(){
+        goTyping = setInterval(typing, 200);  
+    }); 
+    
+    $('.btn_click').on('click', function(){
+        
+    })
+    
+    
+
+    function typing () {
+    
+        let word = textC[i]
+        
+        $('.intro_txt').append(textC[i])
+        
+        i++;
+        if (i == textC.length) { 
+            clearInterval(goTyping); 
+            document.addEventListener('keydown',  keyDown);
+            document.addEventListener('keyup',  keyUp);
+            $('.key_press').delay(500).animate({
+                opacity: '1'
+            }, 1500);
+        }  
+    }
+});
+
+
 //캔버스 기본 설정들
 const canvas = document.getElementById('characterCanvas');
 const ctx = canvas.getContext('2d');
 
 ///캔버스 요소들이 더 선명하게 보이게 하는 방법///
 
-
 const dpr = window.devicePixelRatio; // 1 (디바이스 환경마다 다르게 값이 나올 수 있음)
-
 
 const canvasWidth = 1200;
 const canvasHeight = window.innerHeight;
@@ -148,10 +186,6 @@ window.addEventListener('load', function () {
     ctx.drawImage(characterImg, 0, 0, cWidth, cHeight, 0, canvasHeight - 90, scWidth, scHeight);
 });
 
-document.addEventListener('keydown',  keyDown);
-document.addEventListener('keyup',  keyUp);
-
-
 
 
 function step() {      
@@ -177,7 +211,7 @@ function step() {
             
     currentLoopIndex++;
         
-    if (currentLoopIndex >= cycleLoop.length) {
+    if (currentLoopIndex >= cycleLoop.length) {0
         currentLoopIndex = 0;
     }
         
@@ -187,10 +221,11 @@ function step() {
     
     if(player.x >= 1090) {
         cancelAnimationFrame(startAnimation);
-        $('.intro').animate({
-            opacity: '0'
-        }, 400, 'easeInBack');
+        $('.loading_animate, .intro_txt').fadeOut(2000,function(){
+            document.removeEventListener('keydown',  keyDown);
+            document.removeEventListener('keyup',  keyUp);
+            $('.btn_click').fadeIn(500);
+        });
     }
     
 }
-
