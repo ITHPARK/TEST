@@ -1,0 +1,10 @@
+@charset "utf-8";
+
+
+.header_wrap {display: flex; justify-content: center; position: fixed; width: 100%;  padding: 15px 0; }
+.header_wrap header {display: flex; width: 1200px; padding: 15px 25px;  background-color: #fff; border-radius: 30px; transition: .5s ease-in-out;}
+.header_wrap header .nav {display: flex; gap: 30px;}
+.header_wrap header .nav li a {font-size: 18px; font-weight: 500;}
+.pageMain {width: 100%; height: 100vh; background-image: linear-gradient(0deg, #21aa58, #35a583, #34a1ad, #139cd7)}
+
+

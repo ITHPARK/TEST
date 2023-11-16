@@ -1,0 +1,27 @@
+{
+  "dependencies": {
+    "http-proxy-middleware": "^2.0.6"
+  },
+  "devDependencies": {
+    "ts-node": "^10.9.1",
+    "typescript": "^5.2.2"
+  },
+  "name": "my_js",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "tsc --build", 
+  	"clean": "tsc --build --clean" 
+  },
+  "author": "cw",
+  "license": "ISC",
+  "description": "",
+  "dependencies": {
+    "typescript": "^4.5.5"
+  },
+  "devDependencies": {
+    "ts-node": "^10.5.0"
+  }
+}
+

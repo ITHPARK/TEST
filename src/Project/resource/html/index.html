@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>파일</title>
+
+    <!---Default linked CSS&JS-->
+    <link href="https://fonts.googleapis.com/css2?family=Orbit&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../css/reset.css">
+    <link rel="stylesheet" href="../css/font.css">
+    <link rel="stylesheet" href="../css/base.css">
+    <link rel="stylesheet" href="../css/jquery-ui.min.css">
+    
+    <script src="../js/plugins/gsap/gsap.min.js"></script>
+    <script src="../js/jquery/jquery-3.6.0.min.js"></script>
+    <script src="../js/jquery/jquery-ui.min.js"></script>
+    <script src="../js/jquery/jquery.easing.min.js"></script>
+    <script src="../js/header.js"></script>
+    <script src="../js/common.js"></script>
+    <!---//Default linked CSS&JS-->
+
+    <link rel="stylesheet" href="../css/index.css">
+    <link rel="stylesheet" href="../css/plugins/fullPage/jquery.fullpage.min.css">
+    
+    <script src="../js/plugins/fullPage/vendors/scrolloverflow.js"></script>
+    <script src="../js/plugins/fullPage/jquery.fullpage.min.js"></script>
+    <script src="../js/3D_Cube.js"></script>
+    <script>
+
+
+        $(function () {
+            
+            let fullpageScroll = $(".fullpage").fullpage({
+                
+                autoScrolling: true,
+                scrollOverflow: true,
+                scrollHorizontally: true,
+                nagivation: true,
+                nagivationPosition: 'right',
+                keyboardScrolling: false,
+        
+                sectionColor: ['#1bbc9b', '#4BBFC3', '#7BAABE', 'whitesmoke'],
+                anchors: ['section1', 'section2', 'section3', 'section4'],
+                menu: '.gnb',
+                
+            });
+        });
+        
+
+    </script>
+
+</head>
+
+<body>
+    <div class="wrap">
+    
+        <div class="intro">
+            <div class="inner">
+                <h2 class="intro_txt"></h2>
+                
+                <div class="loading_animate">     
+                    <canvas id="characterCanvas">
+                    
+                    </canvas>
+                    <script src="../js/introCanvas.js"></script>
+                    <span class="key_press">Press → Key</span>
+                    <span class="door">
+                    </span>
+                    <span class="door2"></span>
+                </div>
+                
+                <div class="">
+                
+                </div>
+            </div>
+        </div>
+        
+        <button class="btn_click">Click!</button>
+        
+        <div class="content_wrap">
+            <div class="quickMenu">
+                <div class="quick_inner">
+                    <div class="cube">
+                        <div class="square front">앞</div>
+                        <div class="square back">뒤</div>
+                        <div class="square left">좌</div>
+                        <div class="square right">우</div>
+                        <div class="square top">상</div>
+                        <div class="square bottom">하</div>
+                    </div>
+                </div>
+            </div>
+            
+            <header>
+                <div class="inner">
+                    <!-- <a href="#" class="logo">123312</a> -->
+                    <ul class="gnb">
+                        <li><a href="#section1">1</a></li>
+                        <li><a href="#section2">2</a></li>
+                        <li><a href="#section3">3</a></li>
+                        <li><a href="#section4">4</a></li>
+                    </ul>
+                </div>
+            
+                <div class="clock_box">
+            
+                    <select id="timeSel" onchange="script.worldTimeList(this.options[this.selectedIndex].text)">
+            
+                        <!-- 방법2 매개변수에 this를 넣는다 -->
+                        <!-- 방법3 매개변수에 this.options[this.selectedIndex].text를 넣는다 -->
+                        <option value="9">한국123123</option>
+                        <option value="1">영국</option>
+                        <option value="4">미국</option>
+                        <option value="9">일본</option>
+                        <option value="8">중국</option>
+                    </select>
+                    <p class="time-write"></p>
+            
+                </div>
+            </header>
+            
+            
+            <div class="fullpage">
+                <div class="section first_page">
+                    <div class="inner">
+            
+                    </div>
+                </div>
+                <div class="section">
+                    <p>
+                        324
+                    </p>
+                </div>
+                <div class="section">
+                    <p>
+                        23213
+                    </p>
+                </div>
+                <div class="section section4 fp-auto-height fp-auto-height-responsive">
+                    <p>
+                        216545643216545643216545643216545643216545643216545643216545643216545643216545643216545643216545643216545643216545643216545643216545643216545643216545643216545643216545643216545643216545643216545643216545643216545643216545643216545643216545643216545643216545643216545643216545643216545643216545643216545643
+                        216545643216545643216545643216545643216545643216545643216545643216545643216545643216545643216545643216545643216545643216545643216545643216545643216545643216545643216545643216545643216545643216545643216545643216545643216545643216545643216545643216545643216545643216545643216545643216545643216545643216545643
+                        216545643216545643216545643216545643216545643216545643216545643216545643216545643216545643216545643216545643216545643216545643216545643216545643216545643216545643216545643216545643216545643216545643216545643216545643216545643216545643216545643216545643216545643216545643216545643216545643216545643216545643
+                        216545643216545643216545643216545643216545643216545643216545643216545643216545643216545643216545643216545643216545643216545643216545643216545643216545643216545643216545643216545643216545643216545643216545643216545643216545643216545643216545643216545643216545643216545643216545643216545643216545643216545643
+                        216545643216545643216545643216545643216545643216545643216545643216545643216545643216545643216545643216545643216545643216545643216545643216545643216545643216545643216545643216545643216545643216545643216545643216545643216545643216545643216545643216545643216545643216545643216545643216545643216545643216545643
+                        216545643216545643216545643216545643216545643216545643216545643216545643216545643216545643216545643216545643216545643216545643216545643216545643216545643216545643216545643216545643216545643216545643216545643216545643216545643216545643216545643216545643216545643216545643216545643216545643216545643216545643
+                        216545643216545643216545643216545643216545643216545643216545643216545643216545643216545643216545643216545643216545643216545643216545643216545643216545643216545643216545643216545643216545643216545643216545643216545643216545643216545643216545643216545643216545643216545643216545643216545643216545643216545643
+                        216545643216545643216545643216545643216545643216545643216545643216545643216545643216545643216545643216545643216545643216545643216545643216545643216545643216545643216545643216545643216545643216545643216545643216545643216545643216545643216545643216545643216545643216545643216545643216545643216545643216545643
+                        216545643216545643216545643216545643216545643216545643216545643216545643216545643216545643216545643216545643216545643216545643216545643216545643216545643216545643216545643216545643216545643216545643216545643216545643216545643216545643216545643216545643216545643216545643216545643216545643216545643216545643
+                    </p>
+                </div>
+            </div>
+            
+            
+            <div class="box">
+                <p>mjivrgeiomrvegwoiumpoirgewvnpiomuvrgeimouverwg</p>
+            </div>
+        </div>
+
+    </div>
+    
+</body>
+
+
+
+
+</html>
+
+
