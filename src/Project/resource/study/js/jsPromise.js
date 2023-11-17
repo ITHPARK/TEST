@@ -42,7 +42,7 @@ const getUser =()=> {
       //실패했을 때 
       reject(new Error("디비가 비어있습니다."));
       
-    }else {20210628
+    }else {
     
       //성공했을 때 
       resolve(user_db);
@@ -63,7 +63,7 @@ getUser().then((msg) => {
   
 }).catch((msg) => {
 
-  console.log(msg);
+  console.error(msg);
   
 })
   
