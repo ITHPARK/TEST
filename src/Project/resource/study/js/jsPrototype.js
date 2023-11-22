@@ -6,7 +6,7 @@
 //프로토 타입 선언 프로토타입의 이름 시작에는 꼭 대문자가 들어가야됨.
 function Person(){} 
 
-//프로토타입 객체 추가 
+//프로토타입 객체 추가
 var jisoo = new Person();
 var joon = new Person();
 
