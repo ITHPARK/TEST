@@ -4,7 +4,7 @@ const logName = (name) => {
     console.log(name);
 };
 logName('Taeng');
-const num = 123123;
+const num = 123112323;
 console.log(num);
 
 
