@@ -65,7 +65,7 @@ getUser().then((msg) => {
 
   console.error(msg);
   
-})
+});
   
   
 
