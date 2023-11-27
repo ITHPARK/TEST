@@ -56,23 +56,22 @@ console.log('zxc');
 
 //예제
 
-setTimeout(function(){
-  console.log('Macrotask')
-},0)
+// setTimeout(function(){
+//   console.log('Macrotask')
+// },0)
 
-Micorotask = () => {
-  return new Promise ((resolve, reject)=> {
-    resolve(1);
-  })
-}
+// Micorotask = () => {
+//   return new Promise ((resolve, reject)=> {
+//     resolve(1);
+//   })
+// }
 
-Micorotask().then((res) => {console.log(res+1)});
+// Micorotask().then((res) => {console.log(res+1)});
 
 //setTimeout을 Call Stack에 호출 => Call Stack에 호출된 setTimeout의 콜백을 Macrotask Queue에 적재 => Microtask 함수를 Call Stack에 호출 => Microtask Queue에 콜백을 적재 => 
 //Microtask Queue에 적재된 Microtask 함수의 콜백을 Call Stack에 호출하여 실행 => Macrotask Queue에 적재된 setTimeout의 콜백을 Call Stack에 호출하여 실행
 
 //결과는  2 Macrotask로 나중에 호츌한 프로미스의 콜백이 먼저 실행됨
-
 
 
 
